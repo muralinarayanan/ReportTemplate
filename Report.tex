@@ -1,0 +1,76 @@
+
+\documentclass[openany, twoside] {memoir}
+
+\include{Premble}
+
+
+\hypersetup{pdftitle={The Title},
+ pdfauthor={The Author },
+ pdfkeywords={Keywords Report }}
+
+% clear all the default
+\fancyfoot{}
+\fancyhead{}
+% Setup the Left, Center, Right, Even and Odd page headers and footer
+\fancyhead[LE] { \nouppercase { \leftmark } }
+\fancyhead[CO,CE]{}
+\fancyhead[RO] { \rightmark }
+\fancyhead[LO,RE] {\bfseries Report Title }  
+
+
+\fancyfoot[LO,RE] {\bfseries \today}
+\fancyfoot[CO,CE] {\includegraphics[width=1cm]{images/logo.png}}
+\fancyfoot[RO,LE] {Page: \thepage}
+
+
+% Change header and footer rule width
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% set page style
+\pagestyle{fancy}
+\usepackage{multirow}
+
+\makeindex
+
+\begin{document}
+	
+	\include{FrontPage}
+
+
+
+
+\setcounter{tocdepth}{1}
+
+\tableofcontents 
+
+\listoftables
+
+\listoffigures
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                          Part - Principle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\part{Project}
+\include{Chapter1}
+
+
+
+\part{Appendix}
+\appendix
+
+%\includepdf[pagecommand={\thispagestyle{plain}}, pages={2-last},scale=0.8]{DIRECTORY/FILE.pdf}
+
+%\attachfile{DIRECTORY/FILE.pdf}
+
+
+
+
+\printindex
+
+\end{document}
+
+ 

@@ -1,0 +1,28 @@
+	\pagestyle{empty}
+
+% Put an image here
+\begin{minipage}[c][6cm][c]{\textwidth} 
+	\includegraphics*[width=\textwidth,height=\textheight,keepaspectratio]
+	{images/logo}
+	
+	
+\end{minipage}
+
+\begin{tikzpicture} [overlay,remember picture]
+	\draw[ultra thick,gray] ($(current page.center)+(1,2)$) -- ++(0,-3cm) 
+	node[midway,left=0.25cm,text width=5cm,align=right,black!75]
+	{{\fontsize{25}{30} \selectfont \bfseries Project  \\[10pt] Report }} 
+	node[midway,right=0.25cm,text width=6cm,align=left,orange]
+	{{\fontsize{40}{86.4} \selectfont PROJ}};
+	
+	\node at ($(current page.center)+(0,-4)$) {{\fontsize{60}{72} \selectfont The Project}};
+	
+	\node[text width=20cm,align=center] at ($(current page.center)+(0,-6.5)$) {{\fontsize{16}{19.2} \selectfont \textcolor{orange}{ \bfseries \today }}  };
+\end{tikzpicture}
+
+\pagebreak
+
+\pagenumbering{roman} 
+\setcounter{page}{1} 
+\setcounter{tocdepth}{1}
+\pagestyle{fancy}
